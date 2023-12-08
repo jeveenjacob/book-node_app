@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t my-node-app .'
+                sh ' sudo docker build -t my-node-app .'
             }
         }
         stage('Test') {
             steps {
-                sh 'docker run --rm my-node-app npm test'
+                sh 'sudo docker run --rm my-node-app npm test'
             }
         }
         stage('Deploy') {
