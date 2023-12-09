@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh docker run --rm my-node-app npm test'
+                sh 'docker run --rm my-node-app npm test'
             }
         }
         stage('Deploy') {
